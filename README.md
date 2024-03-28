@@ -10,7 +10,8 @@ Before installing uPyCraft IDE, make sure you have the latest version of Python 
 
 1. Go to the Python Downloads page: www.python.org/downloads and download the installation file.
    
-     ![Screenshot (2)](https://github.com/SnehaChandrashekhar/micropython--projects/assets/159817964/aeff4e49-f60b-46fc-965e-241fbdfd1f0b)
+     ![Screenshot (2)](https://github.com/SnehaChandrashekhar/MicroPython-Projects/assets/159817964/94663d56-7a77-4d16-895d-08ecf2a1f65c)
+
 
 2. After a few seconds, you should have a file called python-3.12.1.exe file in your computer. Double-click the file to open it.
 3. Enable the option at the bottom "Add Python 3.12 to PATH". Then, press the “Install Now” button.
@@ -25,7 +26,8 @@ As mentioned before,we’ll be using uPyCraft IDE to program the ESP32 or ESP826
 2. After a few seconds you should see a similar file (uPyCraft_VX.exe) in your Downloads folder Double-click that file.
 3. A new window opens with the uPyCraft IDE software, We’ll be using this software to flash our ESP based boards with MicroPython firmware as well as to program the boards.
    
-    ![Screenshot (3)](https://github.com/SnehaChandrashekhar/micropython--projects/assets/159817964/b454da80-3e50-49ec-ab2c-5a42b39fad80)
+   ![Screenshot (3)](https://github.com/SnehaChandrashekhar/MicroPython-Projects/assets/159817964/136fe4af-e2e1-4e28-9853-c9c754178c42)
+
 
 
    
@@ -37,18 +39,21 @@ With uPyCraft IDE installed in your computer, you can easily flash your ESP32 bo
 
 1. To download the latest version of MicroPython firmware for the ESP32, go to the MicroPython Downloads page https://micropython.org/download/ and scroll all the way down to the ESP32 section select ESP32/WROOM
 
-    ![Screenshot (4)](https://github.com/SnehaChandrashekhar/micropython--projects/assets/159817964/25366cb1-b138-45ca-9c29-826f40bf85db)
+   ![Screenshot (4)](https://github.com/SnehaChandrashekhar/MicroPython-Projects/assets/159817964/9cd6cc38-47c8-4f29-8c44-27bd2dae44a5)
+
 
 2. Download the ESP32.bin file – for example: esp32-20181007-v1.9.4-631-g338635ccc.bin.
 
-    ![Screenshot (5)](https://github.com/SnehaChandrashekhar/micropython--projects/assets/159817964/fac55d3b-491e-4ce5-a29a-0db05409e3bf)
+   ![Screenshot (5)](https://github.com/SnehaChandrashekhar/MicroPython-Projects/assets/159817964/e1994fe8-d297-4f1e-9eaa-00ed11dd5ddf)
+
 
 
    
 # Selecting Serial Port in uPyCraft IDE
 Go to Tools > Serial and select your ESP32 COM port.
 
-   ![Screenshot (6)](https://github.com/SnehaChandrashekhar/micropython--projects/assets/159817964/e45a5ea5-e7f9-4cfe-9207-e0e7a1aa4976)
+   ![Screenshot (6)](https://github.com/SnehaChandrashekhar/MicroPython-Projects/assets/159817964/96048276-da8c-4c61-8208-0f8e715e7136)
+
 
 
 ## Important: if you plug your ESP32 board to your computer, but you can’t find the ESP32 Port available in your uPyCraft IDE, it might be one of these two problems: 1. USB drivers missing OR 2. USB cable without data wires.
@@ -69,12 +74,14 @@ USB cables from powerbanks often don’t have data wires (they are charge only).
 # Selecting the Board in uPyCraft IDE
 Go to Tools > Board > so make sure you select the "esp32" option:
 
-  ![Screenshot (7)](https://github.com/SnehaChandrashekhar/micropython--projects/assets/159817964/4b714beb-41b3-41eb-bcda-8d19e00cdcc8)
+ ![Screenshot (7)](https://github.com/SnehaChandrashekhar/MicroPython-Projects/assets/159817964/6ab3a565-86f2-48e1-823d-bdbb0b56ec6b)
+
 
 
 1. Finally, go to Tools > BurnFirmware menu to flash your ESP32 with MicroPython.
 
-    ![Screenshot (8)](https://github.com/SnehaChandrashekhar/micropython--projects/assets/159817964/7eee55a0-5c65-47e6-a1c1-9a5eb0d9afbf)
+   ![Screenshot (8)](https://github.com/SnehaChandrashekhar/MicroPython-Projects/assets/159817964/66f436a0-5ae1-42b2-bc84-cd744ae71e35)
+
 
 2. Select all these options to flash the ESP32 board:
   --> board: esp32
@@ -83,22 +90,18 @@ Go to Tools > Board > so make sure you select the "esp32" option:
   --> com: COMX (in our case it’s COM4)
   --> Firmware: Select "Users" and choose the ESP32 .bin file downloads After pressing the "Choose" button, navigate to your Downloads folder and select the ESP32.binfile.
 
-    ![Screenshot (9)](https://github.com/SnehaChandrashekhar/micropython--projects/assets/159817964/c466ee4b-4847-4ac9-824d-3cff1b561f95)
+    ![Screenshot (9)](https://github.com/SnehaChandrashekhar/MicroPython-Projects/assets/159817964/86cac377-bd3c-4f09-8a1a-7a778cca82cd)
+
 
 
 3. Having all the settings selected, hold-down the "BOOT/FLASH" button in your ESP32 board. 
 4. While holding down the "BOOT/FLASH", click the "ok" button in the burn firmware window.
 5. When the "EraseFlash" process begins, you can release the "BOOT/FLASH" button. After a few seconds, the firmware will be flashed into your ESP32 board.
 
-    ![Screenshot (11)](https://github.com/SnehaChandrashekhar/micropython--projects/assets/159817964/81944b9c-d5ee-4091-a87b-8224dd50afc0)
+    ![Screenshot (11)](https://github.com/SnehaChandrashekhar/MicroPython-Projects/assets/159817964/607e4890-04e9-485a-a0a8-ad46b74a3cf9)
+
 
 
 Note: if the "EraseFlash" bar doesn’t move and you see an error message saying "erase false/update false", it means that your ESP32 wasn’t in flashing mode. You need to repeat all the steps described earlier and hold the "BOOT/FLASH" button again to ensure that your ESP32 goes into flashing mode.
   
-  ![Screenshot (10)](https://github.com/SnehaChandrashekhar/micropython--projects/assets/159817964/601db5f4-8a4c-4001-a406-3e5fab220d04)
-
-
-
-
-"# MicroPython-Projects" 
-"# MicroPython-Projects" 
+![Screenshot (10)](https://github.com/SnehaChandrashekhar/MicroPython-Projects/assets/159817964/cd60b2e8-01bb-46eb-8979-9fe93b627dea)
