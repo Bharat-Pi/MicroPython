@@ -101,3 +101,4 @@ Note: if the "EraseFlash" bar doesn’t move and you see an error message saying
 
 
 "# MicroPython-Projects" 
+"# MicroPython-Projects" 
