@@ -24,17 +24,17 @@ while True:
     sleep(3)
     lcd.clear()
     lcd.putstr("I2C LCD Tutorial")
-    sleep(2)
+    sleep(3)
     lcd.clear()
     lcd.putstr("Lets Count 0-10!")
-    sleep(2)
+    sleep(3)
     lcd.clear()
     for i in range(11):
         lcd.putstr(str(i))
         sleep(1)
         lcd.clear()
     lcd.putstr("Thank you")
-    sleep(2)
+    sleep(3)
     lcd.clear()
 
 
