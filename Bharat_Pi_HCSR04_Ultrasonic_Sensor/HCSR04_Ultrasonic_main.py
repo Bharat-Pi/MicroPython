@@ -1,8 +1,8 @@
 #PIN CONNECTIONS
 #VCC - 3.3V/ 5V
 #GND - GND
-#TRIG - 5 (ANY GPIO)
-#ECHO - 15 (ANY GPIO)
+#TRIG - 33 (ANY GPIO)
+#ECHO - 32 (ANY GPIO)
 #LCD  PIN CONNECTIONS
 #SDA AND SCL - SDA AND SCL OF ESP32
 #VCC - 5V
@@ -12,7 +12,7 @@ from hcsr04 import HCSR04
 from time import sleep
 
 # ESP32
-sensor = HCSR04(trigger_pin=5, echo_pin=15, echo_timeout_us=10000)
+sensor = HCSR04(trigger_pin=33, echo_pin=32, echo_timeout_us=10000)
 
 while True:
     distance = sensor.distance_cm()
