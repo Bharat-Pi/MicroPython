@@ -7,7 +7,7 @@
 #SDA AND SCL - SDA AND SCL OF ESP32
 #VCC - 5V
 #GND - GND
-#upload lcd library if you are using lcd sensor
+#upload lcd library from Bharapi_lcd_display folder if you are using lcd sensor
 
 from hcsr04 import HCSR04
 from time import sleep
