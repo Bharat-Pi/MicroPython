@@ -34,3 +34,4 @@ while True:
     sleep(2)
     lcd.clear()
 
+
