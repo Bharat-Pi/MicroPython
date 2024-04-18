@@ -23,7 +23,7 @@ Before installing uPyCraft IDE, make sure you have the latest version of Python 
 As mentioned before,we’ll be using uPyCraft IDE to program the ESP32 or ESP8266 boards using the MicroPython firmware. In our opinion, uPyCraft IDE is the easiest way of programming ESP based boards with MicroPython at the moment.
 
 1. To download uPyCraft IDE for Windows go to this link https://randomnerdtutorials.com/uPyCraftWindows.
-2. After a few seconds you should see a similar file (uPyCraft_VX.exe) in your Downloads folder Double-click that file.
+2. After a few seconds you should see a similar file (uPyCraft_V1.exe) in your Downloads folder Double-click that file.
 3. A new window opens with the uPyCraft IDE software, We’ll be using this software to flash our ESP based boards with MicroPython firmware as well as to program the boards.
    
    ![Screenshot (3)](https://github.com/SnehaChandrashekhar/MicroPython-Projects/assets/159817964/136fe4af-e2e1-4e28-9853-c9c754178c42)
