@@ -1,6 +1,6 @@
 #  Downloading & Installing the uPyCraft IDE – for Windows PC Instructions
 
-There are different firmwares that you can use to program the ESP32 and ESP8266 boards. If you want to program the ESP32 or ESP8266 board using the MicroPython firmware, we recommend using uPyCraft IDE. uPyCraft IDE runs in any major operating system. here we’ll show you how to install the uPyCraft IDE for MicroPython on a Windows PC.
+There are different firmwares that you can use to program the ESP32 boards. If you want to program the ESP32 board using the MicroPython firmware, we recommend using uPyCraft IDE. uPyCraft IDE runs in any major operating system. here we’ll show you how to install the uPyCraft IDE for MicroPython on a Windows PC.
 
 Before installing uPyCraft IDE, make sure you have the latest version of Python installed in your computer. If you don’t, follow the next instructions to install Python.
 
@@ -105,3 +105,94 @@ Go to Tools > Board > so make sure you select the "esp32" option:
 Note: if the "EraseFlash" bar doesn’t move and you see an error message saying "erase false/update false", it means that your ESP32 wasn’t in flashing mode. You need to repeat all the steps described earlier and hold the "BOOT/FLASH" button again to ensure that your ESP32 goes into flashing mode.
   
 ![Screenshot (10)](https://github.com/SnehaChandrashekhar/MicroPython-Projects/assets/159817964/cd60b2e8-01bb-46eb-8979-9fe93b627dea)
+
+
+# THONNY IDE
+# Downloading & Installing the Thonny IDE – for Windows PC Instructions
+
+If you want to program your ESP32 board with MicroPython firmware, it’s very handy to use an IDE in this guide, we’ll introduce you to Thonny IDE.
+We’ve experimented with several IDEs to program the ESP32 boards using MicroPython, and Thonny seemed a good choice. Although there are some bugs, it is constantly being updated and improved.
+It allows you to program your ESP32 boards with MicroPython, and it is compatible with Windows, Mac and Linux.
+
+# you can buy Bharat Pi boards on Bharat pi website --> https://bharatpi.net/shop/ , AND also on Amazon website.
+
+# What is MicroPython?
+
+MicroPython is a Python 3 programming language re-implementation targeted for microcontrollers and embedded systems. MicroPython is very similar to regular Python The most significant difference between Python and MicroPython is that MicroPython was designed to work under constrained conditions.
+Because of that, MicroPython does not come with the entire pack of standard libraries and few exceptions. It only includes a small subset of the Python standard libraries, but it includes modules to easily control and interact with the GPIOs, use Wi-Fi, and other communication protocols.
+
+# Installing Thonny IDE :-
+
+To install Thonny on your Windows PC, follow the next instructions:
+
+1. Go to https://thonny.org
+
+PHOTO
+
+2. Download the latest version for Windows and wait a few seconds while it downloads.
+
+3. Run the .exe file.
+
+4. Follow the installation wizard to complete the installation process. You just need to click on Next.
+
+5. After completing the installation open Thonny IDE a page should open like below shown.
+
+Photo
+
+# How to Flash MicroPython firmware:-
+
+MicroPython isn’t flashed into the ESP32 boards by default. The first thing you need to do is to start programming your boards with MicroPython flash/upload/burn the firmware.
+
+There are different ways in which you can do that:
+Thonny IDE comes with a tool that allows you to quickly install MicroPython firmware on your board. 
+
+# Downloading MicroPython Firmware :-
+
+1. To download the latest version of MicroPython firmware for the ESP32, go to the MicroPython Downloads page https://micropython.org/download/ and scroll all the way down to the ESP32 section.
+2. Select the type of board you’re using select ESP32/WROOM. 
+
+You should see a similar web page (see figure below) with links to download .bin files. Download the latest release.
+
+PHOTO
+
+The downloaded file will go to the Downloads folder, Continue reading to learn how to flash the firmware on your boards.
+
+
+# Flashing MicroPython Firmware using Thonny IDE :-
+
+In this section you’ll learn how to flash MicroPython firmware on your boards using Thonny IDE, Follow the next steps:
+
+1. Connect your ESP32 board to your computer.
+
+2. Open Thonny IDE, Go to Tools -> Options -> Interpreter.
+
+PHOTO
+
+3) Select the interpreter you want to use accordingly to the board you’re using and select the COM port your board is connected to and Finally, click on the link Install or update firmware.
+
+PHOTO
+
+4) Select the port once again, and then click on the Browse button to open the .bin file with the firmware you’ve downloaded on the previous step. Select the options as shown in the picture below and finally click on Install.
+
+PHOTO
+
+After a few seconds, the installation should be completed.
+
+
+# Testing the Installation :-
+
+## Important: before testing the installation, your ESP32 board needs to be flashed with MicroPython firmware (see the above steps for flashing).
+
+Connect the board to your computer using a USB cable.
+To test the installation, you need to tell Thonny that you want to run MicroPython Interpreter and select the board you are using.
+
+1. Go to Tools > Options and select the Interpreter tab. Make sure you’ve selected the right interpreter for your board as well as the COM port.
+You can also select the "Try to detect automatically"  option, but only if you just have one board connected to your computer at a time. Otherwise, select the specific port for the board you’re using.
+2. Thonny IDE should now be connected to your board and you should see the prompt on the Shell.
+
+PHOTO
+
+3. Type the command help() in the Shell and see if it responds back.
+If it responded back, everything is working fine. Now, you can send a few more commands to test.
+
+PHOTO
