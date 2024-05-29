@@ -107,6 +107,7 @@ Note: if the "EraseFlash" bar doesn’t move and you see an error message saying
 ![Screenshot (10)](https://github.com/SnehaChandrashekhar/MicroPython-Projects/assets/159817964/cd60b2e8-01bb-46eb-8979-9fe93b627dea)
 
 
+
 # THONNY IDE
 # Downloading & Installing the Thonny IDE – for Windows PC Instructions
 
@@ -127,7 +128,8 @@ To install Thonny on your Windows PC, follow the next instructions:
 
 1. Go to https://thonny.org
 
-PHOTO
+![Screenshot (41)](https://github.com/Bharat-Pi/MicroPython/assets/167289991/4a2d69ae-ed29-42d0-b8d3-e5a098879e06)
+
 
 2. Download the latest version for Windows and wait a few seconds while it downloads.
 
@@ -137,7 +139,8 @@ PHOTO
 
 5. After completing the installation open Thonny IDE a page should open like below shown.
 
-Photo
+![image](https://github.com/Bharat-Pi/MicroPython/assets/167289991/77200e24-3e84-4ddc-be4b-c7b323539384)
+
 
 # How to Flash MicroPython firmware:-
 
@@ -149,11 +152,13 @@ Thonny IDE comes with a tool that allows you to quickly install MicroPython firm
 # Downloading MicroPython Firmware :-
 
 1. To download the latest version of MicroPython firmware for the ESP32, go to the MicroPython Downloads page https://micropython.org/download/ and scroll all the way down to the ESP32 section.
-2. Select the type of board you’re using select ESP32/WROOM. 
+2. Select the type of board you’re using select ESP32/WROOM.
+
+![Screenshot (39)](https://github.com/Bharat-Pi/MicroPython/assets/167289991/110c6a20-327e-4b33-aa4d-d2f4c50807a6)
 
 You should see a similar web page (see figure below) with links to download .bin files. Download the latest release.
 
-PHOTO
+![Screenshot (40)](https://github.com/Bharat-Pi/MicroPython/assets/167289991/7e23ab61-a235-4fbb-9632-253066b527eb)
 
 The downloaded file will go to the Downloads folder, Continue reading to learn how to flash the firmware on your boards.
 
@@ -166,18 +171,22 @@ In this section you’ll learn how to flash MicroPython firmware on your boards 
 
 2. Open Thonny IDE, Go to Tools -> Options -> Interpreter.
 
-PHOTO
+![Screenshot (43)](https://github.com/Bharat-Pi/MicroPython/assets/167289991/5885bd63-00dd-4f24-8568-9eaedb50f586)
+
 
 3) Select the interpreter you want to use accordingly to the board you’re using and select the COM port your board is connected to and Finally, click on the link Install or update firmware.
 
-PHOTO
+![Screenshot (44)](https://github.com/Bharat-Pi/MicroPython/assets/167289991/fda2b44c-4c6f-49a1-ae88-2385475c50c6)
 
-4) Select the port once again, and then click on the Browse button to open the .bin file with the firmware you’ve downloaded on the previous step. Select the options as shown in the picture below and finally click on Install.
 
-PHOTO
+4) Select the port once again, and then click on the Browse button to open the .bin file with the firmware you’ve downloaded on the previous step. Select the options as shown in the picture below and finally click on Install.After a few seconds, the installation should be completed.
 
-After a few seconds, the installation should be completed.
+![Screenshot (46)](https://github.com/Bharat-Pi/MicroPython/assets/167289991/5f65b9e8-33af-47b3-bcbe-f8a702cc78ee)
 
+(OR)
+You can do this steps using -> configure interpreter in the buttom of the thonny ide screen as shown in the image below.
+
+ ![Screenshot (47)](https://github.com/Bharat-Pi/MicroPython/assets/167289991/b78debbc-8dff-4fcc-bae1-d7f1b37e0972)
 
 # Testing the Installation :-
 
@@ -189,9 +198,6 @@ To test the installation, you need to tell Thonny that you want to run MicroPyth
 1. Go to Tools > Options and select the Interpreter tab. Make sure you’ve selected the right interpreter for your board as well as the COM port.
 You can also select the "Try to detect automatically"  option, but only if you just have one board connected to your computer at a time. Otherwise, select the specific port for the board you’re using.
 2. Thonny IDE should now be connected to your board and you should see the prompt on the Shell.
-
-PHOTO
-
 3. Type the command help() in the Shell and see if it responds back.
 If it responded back, everything is working fine. Now, you can send a few more commands to test.
 
