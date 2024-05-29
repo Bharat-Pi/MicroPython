@@ -184,7 +184,7 @@ In this section you’ll learn how to flash MicroPython firmware on your boards 
 ![Screenshot (46)](https://github.com/Bharat-Pi/MicroPython/assets/167289991/5f65b9e8-33af-47b3-bcbe-f8a702cc78ee)
 
 (OR)
-You can do this steps using -> configure interpreter in the buttom of the thonny ide screen as shown in the image below.
+You can do this steps using -> configure interpreter in the bottom of the thonny ide screen as shown in the image below.
 
  ![Screenshot (47)](https://github.com/Bharat-Pi/MicroPython/assets/167289991/b78debbc-8dff-4fcc-bae1-d7f1b37e0972)
 
