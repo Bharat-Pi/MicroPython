@@ -1,6 +1,6 @@
 #  Downloading & Installing the uPyCraft IDE – for Windows PC Instructions
 
-There are different firmwares that you can use to program the ESP32 boards. If you want to program the ESP32 board using the MicroPython firmware, we recommend using uPyCraft IDE. uPyCraft IDE runs in any major operating system. here we’ll show you how to install the uPyCraft IDE for MicroPython on a Windows PC.
+There are different firmwares that you can use to program the ESP32 boards. If you want to program the ESP32 board using the MicroPython firmware, we recommend using uPyCraft IDE/Thonny IDE. uPyCraft IDE runs in any major operating system. here we’ll show you how to install the uPyCraft IDE for MicroPython on a Windows PC.
 
 Before installing uPyCraft IDE, make sure you have the latest version of Python installed in your computer. If you don’t, follow the next instructions to install Python.
 
@@ -107,6 +107,7 @@ Note: if the "EraseFlash" bar doesn’t move and you see an error message saying
 ![Screenshot (10)](https://github.com/SnehaChandrashekhar/MicroPython-Projects/assets/159817964/cd60b2e8-01bb-46eb-8979-9fe93b627dea)
 
 
+# if you are not able to download the PyCraft IDE(it will not support for some windows) we have alternative for that i.e Thonny IDE
 
 # THONNY IDE
 # Downloading & Installing the Thonny IDE – for Windows PC Instructions
