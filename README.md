@@ -142,6 +142,9 @@ To install Thonny on your Windows PC, follow the next instructions:
 
 ![image](https://github.com/Bharat-Pi/MicroPython/assets/167289991/77200e24-3e84-4ddc-be4b-c7b323539384)
 
+![Screenshot (53)](https://github.com/Bharat-Pi/MicroPython/assets/167289991/c0adb9e8-2cea-4661-bee2-ff7481f3d4ec)
+
+
 
 # How to Flash MicroPython firmware:-
 
@@ -171,14 +174,12 @@ In this section you’ll learn how to flash MicroPython firmware on your boards 
 1. Connect your ESP32 board to your computer.
 
 2. Open Thonny IDE, Go to Tools -> Options -> Interpreter.
-
-![Screenshot (43)](https://github.com/Bharat-Pi/MicroPython/assets/167289991/5885bd63-00dd-4f24-8568-9eaedb50f586)
-
+   
+![Screenshot (54)](https://github.com/Bharat-Pi/MicroPython/assets/167289991/42b022b7-a2fd-46c5-99b5-32159c782f56)
 
 3) Select the interpreter you want to use accordingly to the board you’re using and select the COM port your board is connected to and Finally, click on the link Install or update firmware.
 
-![Screenshot (44)](https://github.com/Bharat-Pi/MicroPython/assets/167289991/fda2b44c-4c6f-49a1-ae88-2385475c50c6)
-
+![Screenshot (55)](https://github.com/Bharat-Pi/MicroPython/assets/167289991/869053d6-65e2-40f3-9eb9-014280a199ff)
 
 4) Select the port once again, and then click on the Browse button to open the .bin file with the firmware you’ve downloaded on the previous step. Select the options as shown in the picture below and finally click on Install.After a few seconds, the installation should be completed.
 
@@ -202,4 +203,4 @@ You can also select the "Try to detect automatically"  option, but only if you j
 3. Type the command help() in the Shell and see if it responds back.
 If it responded back, everything is working fine. Now, you can send a few more commands to test.
 
-PHOTO
+![Screenshot (52)](https://github.com/Bharat-Pi/MicroPython/assets/167289991/b408781c-94ec-401c-93d1-e11b530abb5d)
