@@ -140,10 +140,7 @@ To install Thonny on your Windows PC, follow the next instructions:
 
 5. After completing the installation open Thonny IDE a page should open like below shown.
 
-![image](https://github.com/Bharat-Pi/MicroPython/assets/167289991/77200e24-3e84-4ddc-be4b-c7b323539384)
-
 ![Screenshot (53)](https://github.com/Bharat-Pi/MicroPython/assets/167289991/c0adb9e8-2cea-4661-bee2-ff7481f3d4ec)
-
 
 
 # How to Flash MicroPython firmware:-
@@ -174,16 +171,16 @@ In this section you’ll learn how to flash MicroPython firmware on your boards 
 1. Connect your ESP32 board to your computer.
 
 2. Open Thonny IDE, Go to Tools -> Options -> Interpreter.
+
+3. Select the interpreter you want to use accordingly to the board you’re using and select the COM port your board is connected to and Finally, click on the link Install or update firmware.
    
 ![Screenshot (54)](https://github.com/Bharat-Pi/MicroPython/assets/167289991/42b022b7-a2fd-46c5-99b5-32159c782f56)
 
-3) Select the interpreter you want to use accordingly to the board you’re using and select the COM port your board is connected to and Finally, click on the link Install or update firmware.
 
+4. Select the port once again, and then click on the Browse button to open the .bin file with the firmware you’ve downloaded on the previous step. Select the options as shown in the picture below and finally click on Install.After a few seconds, the installation should be completed.
+ 
 ![Screenshot (55)](https://github.com/Bharat-Pi/MicroPython/assets/167289991/869053d6-65e2-40f3-9eb9-014280a199ff)
 
-4) Select the port once again, and then click on the Browse button to open the .bin file with the firmware you’ve downloaded on the previous step. Select the options as shown in the picture below and finally click on Install.After a few seconds, the installation should be completed.
-
-![Screenshot (46)](https://github.com/Bharat-Pi/MicroPython/assets/167289991/5f65b9e8-33af-47b3-bcbe-f8a702cc78ee)
 
 (OR)
 You can do this steps using -> configure interpreter in the bottom of the thonny ide screen as shown in the image below.
