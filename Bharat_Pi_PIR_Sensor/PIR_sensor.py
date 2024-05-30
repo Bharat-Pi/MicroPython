@@ -1,8 +1,3 @@
-#PIN CONNECTIONS
-#LED - 23 - GND
-#PIR - 3.3V
-#PIR - 18
-#PIR - GND
 
 from machine import Pin
 from time import sleep
