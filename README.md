@@ -107,7 +107,7 @@ Note: if the "EraseFlash" bar doesn’t move and you see an error message saying
 ![Screenshot (10)](https://github.com/SnehaChandrashekhar/MicroPython-Projects/assets/159817964/cd60b2e8-01bb-46eb-8979-9fe93b627dea)
 
 
-# if you are not able to download the PyCraft IDE(it will not support for some windows) we have alternative for that i.e Thonny IDE
+## NOTE:if you are not able to download the PyCraft IDE(it will not support for some windows) we have alternative for that i.e Thonny IDE
 
 # THONNY IDE
 # Downloading & Installing the Thonny IDE – for Windows PC Instructions
