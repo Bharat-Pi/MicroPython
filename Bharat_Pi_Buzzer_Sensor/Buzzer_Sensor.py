@@ -3,7 +3,7 @@
    AUTHOR: Bharat Pi
 
    DESC: This script will give you the sample testing of buzzer sensor,
-   which will give you the two different sounds in a loop when you run the script.
+   which will give you the two different sounds/alerts in a loop when you run the script.
  
    COPYRIGHT: BharatPi @MIT license for usage on Bharat Pi boards
  *************************************************************************/
