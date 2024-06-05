@@ -1,7 +1,9 @@
 /*************************************************************************
    PROJECT: Bharat Pi Buzzer sensor Sample Code
    AUTHOR: Bharat Pi
-   DESC: This script will give you the sample testing of buzzer sensor which will make the 2 different sounds when you run the script
+
+   DESC: This script will give you the sample testing of buzzer sensor,
+   which will give you the two different sounds in a loop when you run the script.
  
    COPYRIGHT: BharatPi @MIT license for usage on Bharat Pi boards
  *************************************************************************/
