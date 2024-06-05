@@ -1,11 +1,12 @@
 /*************************************************************************
    PROJECT: Bharat Pi Blink LED Sample Code
    AUTHOR: Bharat Pi
-   DESC: This script will give you the sample testing of blink led
+   DESC: This script will give you the sample testing of blink led, which will do the LED light turn on and off for every one second when you run the code
  
    COPYRIGHT: BharatPi @MIT license for usage on Bharat Pi boards
  *************************************************************************/
-       
+
+      
 import machine
 import time
 
@@ -25,5 +26,4 @@ while True:
     led.off()
     # Wait for 1 second
     time.sleep(1)
-
 
