@@ -2,7 +2,8 @@
    PROJECT: Bharat Pi Accelerometer Sample Code
    AUTHOR: Bharat Pi
 
-   DESC: This script will give you the sample testing of accelerometer sensor.
+   DESC: This script will give you the sample testing of accelerometer sensor,
+   which gives you the acceleration values.
  
    COPYRIGHT: BharatPi @MIT license for usage on Bharat Pi boards
  *************************************************************************/
