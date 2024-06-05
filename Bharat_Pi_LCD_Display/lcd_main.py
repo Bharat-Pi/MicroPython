@@ -1,8 +1,18 @@
-#PIN CONNECTION
-#GND - GND
-#VCC - 5V
-#SDA - SDA(ESP32)
-#SCL - SCL(ESP32)
+/*************************************************************************
+   PROJECT: Bharat Pi LCD sensor Sample Code
+   AUTHOR: Bharat Pi
+
+   DESC: This script will give you the sample testing of LCD sensor,
+   which will prints the message content on its display when you run the code.
+    #PIN CONNECTION
+    #GND - GND
+    #VCC - 5V
+    #SDA - SDA(ESP32)
+    #SCL - SCL(ESP32)
+
+   COPYRIGHT: BharatPi @MIT license for usage on Bharat Pi boards
+ *************************************************************************/
+       
 
 import machine
 from machine import Pin, SoftI2C
