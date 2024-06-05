@@ -1,7 +1,7 @@
 /*************************************************************************
    PROJECT: Bharat Pi Blink LED Sample Code
    AUTHOR: Bharat Pi
-   DESC: This script will give you the sammple testing of blink led
+   DESC: This script will give you the sample testing of blink led
  
    COPYRIGHT: BharatPi @MIT license for usage on Bharat Pi boards
  *************************************************************************/
