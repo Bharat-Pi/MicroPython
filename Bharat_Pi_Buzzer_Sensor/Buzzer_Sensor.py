@@ -1,14 +1,26 @@
+/*************************************************************************
+   PROJECT: Bharat Pi Buzzer sensor Sample Code
+   AUTHOR: Bharat Pi
+   DESC: This script will give you the sample testing of buzzer sensor
+ 
+   COPYRIGHT: BharatPi @MIT license for usage on Bharat Pi boards
+ *************************************************************************/
+
+
 from machine import Pin
 import time
 
-BUZZER_PIN = 23  # GPIO pin connected to the buzzer
+# GPIO pin connected to the buzzer
+BUZZER_PIN = 23 
 
 def setup():
     global buzzer
+    
     # Initialize the buzzer pin
     buzzer = Pin(BUZZER_PIN, Pin.OUT)
 
 def buzz(duration_ms):
+    
     # Turn on the buzzer
     buzzer.on()
     # Wait for the specified duration
@@ -17,6 +29,7 @@ def buzz(duration_ms):
     buzzer.off()
 
 def loop():
+    
     # First loop
     for i in range(100):
         # Make a sound
@@ -40,3 +53,7 @@ setup()
 # Main loop
 while True:
     loop()
+
+
+
+
