@@ -1,3 +1,14 @@
+/*************************************************************************
+   PROJECT: Bharat Pi OLED sensor Sample Code
+   AUTHOR: Bharat Pi
+
+   DESC: This script will give you the sample testing f OLED sensor,
+   which will prints the required message content on its display when you run the code.
+ 
+   COPYRIGHT: BharatPi @MIT license for usage on Bharat Pi boards
+ *************************************************************************/
+
+
 from machine import Pin, SoftI2C
 import ssd1306
 from time import sleep
