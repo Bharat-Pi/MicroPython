@@ -1,4 +1,11 @@
-
+/*************************************************************************
+   PROJECT: Bharat Pi Accelerometer Sample Code
+   AUTHOR: Bharat Pi
+   DESC: This script will give you the sammple testing of accelerometer sensor
+ 
+   COPYRIGHT: BharatPi @MIT license for usage on Bharat Pi boards
+ *************************************************************************/
+                                   
 from machine import Pin, SoftI2C
 import time
 
@@ -11,7 +18,7 @@ MPU6050_PWR_MGMT_1 = 0x6B
 i2c = SoftI2C(scl=Pin(22), sda=Pin(21))
 
 # MPU6050 initialization
-i2c.writeto_mem(MPU6050_ADDR, MPU6050_PWR_MGMT_1, bytearray([0])) # Wake up MPU6050
+i2c.writeto_mem(MPU6050_ADDR, MPU6050_PWR_MGMT_1, bytearray([0]))
 
 def read_acceleration():
   # Read raw acceleration values
@@ -32,7 +39,7 @@ while True:
     print("X:", accel_x)
     print("Y:", accel_y)
     print("Z:", accel_z)
-    print("-----------------------")
+    
   except OSError as e:
     print("Error reading from MPU6050:", e)
   time.sleep(1)
