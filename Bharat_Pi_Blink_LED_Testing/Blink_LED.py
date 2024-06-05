@@ -1,5 +1,11 @@
-#blink led test using BharatPi board
-
+/*************************************************************************
+   PROJECT: Bharat Pi Blink LED Sample Code
+   AUTHOR: Bharat Pi
+   DESC: This script will give you the sammple testing of blink led
+ 
+   COPYRIGHT: BharatPi @MIT license for usage on Bharat Pi boards
+ *************************************************************************/
+       
 import machine
 import time
 
@@ -19,4 +25,5 @@ while True:
     led.off()
     # Wait for 1 second
     time.sleep(1)
+
 
