@@ -1,7 +1,11 @@
 /*************************************************************************
    PROJECT: Bharat Pi IR sensor Sample Code
    AUTHOR: Bharat Pi
-   DESC: This script will give you the sample testing of IR sensor, which will do the LED light turn on when any Obstacle detected near the sensor and turn off the led when Obstacle cleared and it will give the respective message for every three second when you run the code
+
+   DESC: This script will give you the sample testing of IR sensor,
+   which will do the LED light turn on when any Obstacle detected near the sensor 
+   and turn off the led when Obstacle cleared 
+   and it will give the respective message for every three second when you run the code.
  
    COPYRIGHT: BharatPi @MIT license for usage on Bharat Pi boards
  *************************************************************************/
