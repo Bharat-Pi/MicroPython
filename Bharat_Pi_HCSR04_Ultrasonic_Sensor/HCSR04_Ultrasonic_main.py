@@ -1,5 +1,15 @@
-#upload lcd library from Bharapi_lcd_display folder if you are using lcd sensor with Ultrasonic
+/*************************************************************************
+   PROJECT: Bharat Pi Ultrasonic sensor Sample Code
+   AUTHOR: Bharat Pi
 
+   DESC: This script will give you the sample testing of ultrasonic sensor,
+   which will measure the distance and
+   prints the distance values in cm when you run the code.
+   #upload lcd library from Bharapi_lcd_display folder if you are using lcd sensor with Ultrasonic
+
+   COPYRIGHT: BharatPi @MIT license for usage on Bharat Pi boards
+ *************************************************************************/
+       
 import machine
 from hcsr04 import HCSR04
 from machine import Pin, SoftI2C
