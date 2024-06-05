@@ -1,4 +1,14 @@
+/*************************************************************************
+   PROJECT: Bharat Pi PIR Sensor Sample Code
+   AUTHOR: Bharat Pi
 
+   DESC: This script will give you the sample testing of pir sensor,
+   which will detects the objects and 
+   gives the alert message by turning on the led (motion detected) when detected.
+ 
+   COPYRIGHT: BharatPi @MIT license for usage on Bharat Pi boards
+ *************************************************************************/
+     
 from machine import Pin
 from time import sleep
 
