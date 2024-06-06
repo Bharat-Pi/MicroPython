@@ -1,4 +1,4 @@
-#library for lcd
+#library file for lcd sensor if you are using the PyCraft ide for coding upload this lib to esp32 and alter the script accordingly
 
 import utime
 import gc
