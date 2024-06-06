@@ -1,4 +1,4 @@
-#library file for HCSR04 Ultrasonic sensor
+#library file for HCSR04 Ultrasonic sensor if you are using the PyCraft ide for coding upload this lib and alter the script accordingly
 
 import machine, time
 from machine import Pin
