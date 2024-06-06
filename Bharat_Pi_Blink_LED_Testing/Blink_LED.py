@@ -16,10 +16,6 @@
    06/06/2024 -    0.1.1       -    Added the altered code for Thonny ide(Used Thonny IDE version - 4.1.4).
 
  *************************************************************************/
-
-
-      
-
       
 import machine
 import time
