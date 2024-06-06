@@ -1,4 +1,4 @@
-#library for lcd
+#library file for lcd sensor if you are using the PyCraft ide for coding upload this lib to esp32 and alter the script accordingly
 
 """Provides an API for talking to HD44780 compatible character LCDs."""
 
