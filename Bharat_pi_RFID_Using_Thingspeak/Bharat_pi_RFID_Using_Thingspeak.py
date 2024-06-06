@@ -1,3 +1,20 @@
+/*************************************************************************
+   PROJECT NAME: Bharat Pi RFID Using Thingspeak.
+   AUTHOR: Bharat Pi
+   CREATED DATE: 22/05/2024
+   COPYRIGHT: BharatPi @MIT license for usage on Bharat Pi boards
+   VERSION: 0.1.0
+
+   DESCRIPTION: 
+
+   REVISION HISTORY TABLE:
+   ------------------------------------------
+   Date      | Firmware Version | Comments
+   ------------------------------------------
+   22/05/2024 -    0.1.0       -    Initial release of RFID Using Thingspeak script.
+
+ *************************************************************************/
+
 import network
 import urequests
 from mfrc522 import MFRC522
