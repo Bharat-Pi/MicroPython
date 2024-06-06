@@ -1,12 +1,22 @@
 /*************************************************************************
-   PROJECT: Bharat Pi PIR Sensor Sample Code
+   
+   PROJECT NAME: Bharat Pi PIR Sensor Sample Code
    AUTHOR: Bharat Pi
+   CREATED DATE: 25/03/2024
+   COPYRIGHT: BharatPi @MIT license for usage on Bharat Pi boards
+   VERSION: 0.1.1
 
-   DESC: This script will give you the sample testing of pir sensor,
+   DESCRIPTION: This script will give you the sample testing of pir sensor,
    which will detects the objects and 
    gives the alert message by turning on the led (motion detected) when detected.
- 
-   COPYRIGHT: BharatPi @MIT license for usage on Bharat Pi boards
+
+   REVISION HISTORY TABLE:
+   ------------------------------------------
+   Date      | Firmware Version | Comments
+   ------------------------------------------
+   25/03/2024 -    0.1.0       -    Initial release of PIR sensor sample script to read the data(Used PyCraft IDE version - 1.1).
+   06/06/2024 -    0.1.1       -    Added the altered code for Thonny ide(Used Thonny IDE version - 4.1.4).
+
  *************************************************************************/
      
 from machine import Pin
