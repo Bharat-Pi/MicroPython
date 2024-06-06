@@ -9,39 +9,42 @@
 
    COPYRIGHT: BharatPi @MIT license for usage on Bharat Pi boards
  *************************************************************************/
+      
        
-import machine
-from hcsr04 import HCSR04
-from machine import Pin, SoftI2C
-from lcd_api import LcdApi
-from lcd_i2c import I2cLcd
-from time import sleep
+from machine import Pin, time_pulse_us
+import time
 
-I2C_ADDR = 0x27
-totalRows = 2
-totalColumns = 16
+# Define pins
+TRIG_PIN = 33  # GPIO pin for the trigger
+ECHO_PIN = 32  # GPIO pin for the echo
 
-#initializing the I2C method for ESP32
-i2c = SoftI2C(scl=Pin(22), sda=Pin(21), freq=10000)  
+# Set up pins
+TRIG = Pin(TRIG_PIN, Pin.OUT)
+ECHO = Pin(ECHO_PIN, Pin.IN)
 
-#initializing the I2C method for ESP8266
-#i2c = I2C(scl=Pin(5), sda=Pin(4), freq=10000)       
+def measure_distance():
+    # Send a 10µs pulse on the trigger pin
+    TRIG.value(1)
+    time.sleep_us(10)
+    TRIG.value(0)
 
-lcd = I2cLcd(i2c, I2C_ADDR, totalRows, totalColumns)
+    # Measure pulse duration on echo pin
+    pulse_duration = time_pulse_us(ECHO, 1)
+    
+    # Calculate distance (divide by 58 to convert microseconds to centimeters)
+    distance_cm = pulse_duration / 58.0  
+
+    return distance_cm
+
+try:
+    while True:
+        distance = measure_distance()
+        print("Distance:", distance, "cm")
+        time.sleep(1)
+
+except KeyboardInterrupt:
+    pass
 
 
-# ESP32
-sensor = HCSR04(trigger_pin=33, echo_pin=32, echo_timeout_us=10000)
-
-while True:
-
-    distance = sensor.distance_cm()
-    print("Distance: ", distance, "cm")
-    sleep(3)
-    lcd.putstr("Distance:")
-    lcd.putstr(str(distance))
-    lcd.putstr("cm")
-    sleep(2)
-    lcd.clear()
 
 
