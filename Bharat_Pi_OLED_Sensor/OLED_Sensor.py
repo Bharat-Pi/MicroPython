@@ -1,13 +1,21 @@
 /*************************************************************************
-   PROJECT: Bharat Pi OLED sensor Sample Code
+   PROJECT NAME: Bharat Pi OLED sensor Sample Code
    AUTHOR: Bharat Pi
-
-   DESC: This script will give you the sample testing f OLED sensor,
-   which will prints the required message content on its display when you run the code.
- 
+   CREATED DATE: 25/03/2024
    COPYRIGHT: BharatPi @MIT license for usage on Bharat Pi boards
- *************************************************************************/
+   VERSION: 0.1.1
 
+   DESCRIPTION: This script will give you the sample testing f OLED sensor,
+   which will prints the required message content on its display when you run the code.
+
+   REVISION HISTORY TABLE:
+   ------------------------------------------
+   Date      | Firmware Version | Comments
+   ------------------------------------------
+   25/03/2024 -    0.1.0       -    Initial release of OLED sensor sample script to read the data(Used PyCraft IDE version - 1.1).
+   06/06/2024 -    0.1.1       -    Added the altered code for Thonny ide(Used Thonny IDE version - 4.1.4).
+
+ *************************************************************************/
 
 from machine import Pin, SoftI2C
 import ssd1306
