@@ -1,15 +1,27 @@
 /*************************************************************************
-   PROJECT: Bharat Pi Ultrasonic sensor Sample Code
+   PROJECT NAME:  Bharat Pi Ultrasonic sensor Sample Code
    AUTHOR: Bharat Pi
+   CREATED DATE: 25/03/2024
+   COPYRIGHT: BharatPi @MIT license for usage on Bharat Pi boards
+   VERSION: 0.1.1
 
-   DESC: This script will give you the sample testing of ultrasonic sensor,
+   DESCRIPTION: This script will give you the sample testing of ultrasonic sensor,
    which will measure the distance and
    prints the distance values in cm when you run the code.
-   #upload lcd library from Bharapi_lcd_display folder if you are using lcd sensor with Ultrasonic
+   #PIN CONNECTIONS:
+   VCC   -   3.3V
+   TRIG   -   33
+   ECHO   -   32
+   GND   -   GND
 
-   COPYRIGHT: BharatPi @MIT license for usage on Bharat Pi boards
- *************************************************************************/
-      
+   REVISION HISTORY TABLE:
+   ------------------------------------------
+   Date      | Firmware Version | Comments
+   ------------------------------------------
+   25/03/2024 -    0.1.0       -    Initial release of ultrasonic sensor sample script to read the data(Used PyCraft IDE version - 1.1).
+   06/06/2024 -    0.1.1       -    Added the altered code for Thonny ide(Used Thonny IDE version - 4.1.4).
+
+ *************************************************************************/     
        
 from machine import Pin, time_pulse_us
 import time
