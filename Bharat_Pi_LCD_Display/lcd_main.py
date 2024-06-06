@@ -1,8 +1,11 @@
 /*************************************************************************
-   PROJECT: Bharat Pi LCD sensor Sample Code
+   PROJECT NAME: Bharat Pi LCD sensor Sample Code
    AUTHOR: Bharat Pi
+   CREATED DATE: 25/03/2024
+   COPYRIGHT: BharatPi @MIT license for usage on Bharat Pi boards
+   VERSION: 0.1.1
 
-   DESC: This script will give you the sample testing of LCD sensor,
+   DESCRIPTION: This script will give you the sample testing of LCD sensor,
    which will prints the message content on its display when you run the code.
     #PIN CONNECTION
     #GND - GND
@@ -10,9 +13,14 @@
     #SDA - SDA(ESP32)
     #SCL - SCL(ESP32)
 
-   COPYRIGHT: BharatPi @MIT license for usage on Bharat Pi boards
- *************************************************************************/
-       
+   REVISION HISTORY TABLE:
+   ------------------------------------------
+   Date      | Firmware Version | Comments
+   ------------------------------------------
+   25/03/2024 -    0.1.0       -    Initial release of lcd sensor sample script to print the data on display(Used PyCraft IDE version - 1.1).
+   06/06/2024 -    0.1.1       -    Added the altered code for Thonny ide(Used Thonny IDE version - 4.1.4).
+
+ *************************************************************************/   
 
 import machine
 from machine import Pin, SoftI2C
