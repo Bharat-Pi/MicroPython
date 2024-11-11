@@ -1,3 +1,22 @@
+/*************************************************************************
+   PROJECT NAME:  Bharat Pi Dht11 Sample Code of temp &hum readings on webServer
+   AUTHOR: Bharat Pi
+   CREATED DATE: 11/11/2024
+   COPYRIGHT: BharatPi @MIT license for usage on Bharat Pi boards
+   VERSION: 0.0.1
+
+   DESCRIPTION: This script will give you the sample testing of dht11 sensor,
+   which gives you the temperature and humidity reading values on the web server.
+                                   
+   REVISION HISTORY TABLE:
+   ------------------------------------------
+   Date      | Firmware Version | Comments
+   ------------------------------------------
+   11/11/2024 -    0.0.1       -    Initial release of dht11 sensor sample script to read the data on webserver(Used Thonny IDE application).
+
+ ************************************************************************/
+# After uploading the boot.py file then, upload this main.py file to board and run.(boot.py file is available in this folder only)
+
 import socket
 import machine
 import dht
