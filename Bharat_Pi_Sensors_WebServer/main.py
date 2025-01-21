@@ -6,8 +6,8 @@ import time
 import json
 
 # Wi-Fi Credentials
-SSID = 'Hotspot'
-PASSWORD = 'password'
+SSID = 'Purushotham_4G'
+PASSWORD = 'ckg@1931'
 
 # User Credentials
 USERNAME = "BharatPi"
@@ -19,13 +19,16 @@ DHT_PIN = 5
 ULTRASONIC_TRIGGER_PIN = 26
 ULTRASONIC_ECHO_PIN = 25
 FLOW_SENSOR_PIN = 18
+PIR_SENSOR_PIN = 33
+GAS_SENSOR_PIN = 21
 
 # Initialize Sensors
 sensor = dht.DHT22(machine.Pin(DHT_PIN))
 ultrasonic_trigger = machine.Pin(ULTRASONIC_TRIGGER_PIN, machine.Pin.OUT)
 ultrasonic_echo = machine.Pin(ULTRASONIC_ECHO_PIN, machine.Pin.IN)
 flow_sensor = machine.Pin(FLOW_SENSOR_PIN, machine.Pin.IN)
-
+pir_sensor = machine.Pin(PIR_SENSOR_PIN, machine.Pin.IN)
+gas_sensor = machine.Pin(GAS_SENSOR_PIN, machine.Pin.IN)
 current_sensor = None  # To keep track of the selected sensor
 
 
@@ -99,6 +102,25 @@ def read_flow_sensor():
     except Exception as e:
         print(f"Error reading flow sensor: {e}")
         return None
+    
+def read_pir_sensor():
+    """Read data from the PIR sensor."""
+    try:
+        motion_detected = pir_sensor.value()  # 1 if motion is detected, 0 otherwise
+        return "Motion Detected" if motion_detected else "No Motion"
+    except Exception as e:
+        print(f"Error reading PIR sensor: {e}")
+        return "Error"
+    
+def read_gas_sensor():
+    """Read data from the MQ-135 gas sensor."""
+    try:
+        gas_value = gas_sensor.value()  
+        # You can apply a calibration curve or further processing as needed.
+        return gas_value
+    except Exception as e:
+        print(f"Error reading Gas sensor: {e}")
+        return None
 
 
 def login_page():
@@ -154,19 +176,20 @@ def sensor_selection_page():
   </style>
 </head>
 <body>
-  <h2>Select a Sensor</h2>
+  <h2>Select Any Sensor</h2>
   <form method="POST" action="/select-sensor">
     <select name="sensor">
       <option value="dht">DHT22 (Temperature & Humidity)</option>
-      <option value="ultrasonic">Ultrasonic Sensor(Distance)</option>
+      <option value="ultrasonic">Ultrasonic Sensor (Distance)</option>
       <option value="flow">Flow Sensor(Flow Rate)</option>
+      <option value="pir">PIR Sensor (Motion Detection)</option>
+      <option value="gas">Gas Sensor (MQ135)</option>
     </select><br>
     <button type="submit">Select</button>
   </form>
 </body>
 </html>"""
     return html
-
 
 def sensor_data_page(data, chart_data=None, chart_label=None):
     """Return HTML for displaying the selected sensor's data with auto-updating feature."""
@@ -177,51 +200,56 @@ def sensor_data_page(data, chart_data=None, chart_label=None):
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  
   <style>
     body {{ font-family: Arial; text-align: center; background-color: #ADD8E6; }}
     h2 {{ color: #1E90FF; font-size: 2rem; }}
-    p {{ font-size: 1.5rem; }}
+    p {{ color: #FF0000; font-size: 1.5rem; }}
     canvas {{ max-width: 100%; width: 60%; height: 100px; margin: auto; }}
   </style>
 </head>
 <body>
-  <h2>Sensor Server</h2>
+  <h2>Bharat Pi Server</h2>
   <p id="sensorData">{data}</p>
   <canvas id="sensorChart"></canvas>
   <script>
     const ctx = document.getElementById('sensorChart').getContext('2d');
+    
+    // Initialize the chart
+    let chartData = {chart_data};  // Data passed from the server
+    let chartLabels = {list(range(len(chart_data)))};  // Time labels for chart
+    
     let chart = new Chart(ctx, {{
         type: 'line',
         data: {{
-            labels: {list(range(len(chart_data)))},
+            labels: chartLabels,
             datasets: [{{
                 label: '{chart_label}',
-                data: {chart_data},
+                data: chartData,
                 borderColor: 'rgba(75, 192, 192, 1)',
                 backgroundColor: 'rgba(75, 192, 192, 0.2)',
-                borderWidth: 2,
-                fill: true,
+                fill: false,
+                tension: 0.1  // For smoother line
             }}]
         }},
         options: {{
             responsive: true,
             scales: {{
                 x: {{
-                    title: {{
-                        display: true,
-                        text: 'Measurement Number'
+                    title: {{ display: true, text: 'Time' }},
+                    ticks: {{
+                        autoSkip: true,
+                        maxTicksLimit: 20
                     }}
                 }},
                 y: {{
-                    title: {{
-                        display: true,
-                        text: '{chart_label}'
-                    }}
+                    title: {{ display: true, text: '{chart_label}' }}
                 }}
             }}
         }}
     }});
 
+    // Function to update the chart with new data every 3 seconds
     function updateSensorData() {{
       fetch('/sensor-data')
         .then(response => response.text())
@@ -233,7 +261,17 @@ def sensor_data_page(data, chart_data=None, chart_label=None):
 
           // Update the chart data dynamically without refreshing the page
           const newChartData = JSON.parse(newDoc.getElementById('newChartData').innerText);
-          chart.data.datasets[0].data = newChartData;
+          chartData.push(newChartData[newChartData.length - 1]);  // Add new data point
+          chartLabels.push(chartLabels.length);  // Increment the label
+
+          if (chartData.length > 20) {{
+            chartData.shift();  // Keep the chart data to a fixed length (last 20 points)
+            chartLabels.shift();  // Adjust x-axis labels
+          }}
+
+          // Update chart
+          chart.data.labels = chartLabels;
+          chart.data.datasets[0].data = chartData;
           chart.update();
         }})
         .catch(err => console.error('Error updating sensor data:', err));
@@ -245,7 +283,6 @@ def sensor_data_page(data, chart_data=None, chart_label=None):
 </body>
 </html>"""
     return html
-
 
 
 
@@ -281,10 +318,9 @@ def handle_request(request):
             chart_data = []
             if current_sensor == "dht":
                 temp, hum = read_dht_sensor()
-                data = f"Temperature: {temp} °C, Humidity: {hum} %"
+                data = f"Temperature: {temp} &deg;C, Humidity: {hum} %"
                 chart_data = [temp, hum]
-                chart_label = "Temperature (°C)"
-                chart_lable = "Humidity (%)"
+                chart_label = "Temperature (°C) and Humidity (%)"
             elif current_sensor == "ultrasonic":
                 distance = read_ultrasonic_sensor()
                 data = f"Distance: {distance} cm"
@@ -295,6 +331,16 @@ def handle_request(request):
                 data = f"Flow Rate: {flow} L/min"
                 chart_data = [flow]
                 chart_label = "Flow Rate (L/min)"
+            elif current_sensor == "pir":
+                motion_status = read_pir_sensor()
+                data = f"Motion Status: {motion_status}"
+                chart_data = [1 if motion_status == "Motion Detected" else 0]
+                chart_label = "Motion Detection"
+            elif current_sensor == "gas":
+                gas_value = read_gas_sensor()
+                data = f"Gas Value: {gas_value}"
+                chart_data = [gas_value]
+                chart_label = "Gas Sensor value"
             else:
                 data = "No sensor selected."
                 chart_label = "No Data"
