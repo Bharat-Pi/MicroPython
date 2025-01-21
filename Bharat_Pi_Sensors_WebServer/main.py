@@ -6,8 +6,8 @@ import time
 import json
 
 # Wi-Fi Credentials
-SSID = 'Purushotham_4G'
-PASSWORD = 'ckg@1931'
+SSID = 'Your ssid'
+PASSWORD = 'your password'
 
 # User Credentials
 USERNAME = "BharatPi"
